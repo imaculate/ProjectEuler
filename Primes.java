@@ -20,11 +20,11 @@ public static void main(String[] args)
 {
     Primes p = new Primes();
 
-    long t = 600851475143L;
+    long t = 2934749;
     long d = 2;
     while (1==1)
     {
-        long tmp = 600851475143L / d;
+        long tmp = 2934749 / d;
         if ( t % tmp == 0 &&  p.isPrime(tmp) )
         {
             System.out.println("= " + tmp);
