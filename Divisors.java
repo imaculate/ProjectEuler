@@ -11,7 +11,7 @@ public static void main(String[] args){
       
    
    }
-   System.out.println("finallt" + n);
+   System.out.println("finally" + n);
 
 }
 
