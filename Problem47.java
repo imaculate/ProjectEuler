@@ -5,7 +5,7 @@ public class Problem47{
       boolean found = false;
       long ind = 15;
       
-      boolean[] primes = new boolean[1000001];
+      boolean[] primes = new boolean[2000001];
       primes[2] = true;
       primes[5] = true;
       primes[3] = true;
@@ -19,6 +19,7 @@ public class Problem47{
             
          }
       }
+      System.out.println(getFactors(15, primes).size());
 
       while(!found){
          System.out.println("ind =  "+ind);
@@ -36,6 +37,7 @@ public class Problem47{
                      if(getFactors(ind+3, primes).size()==4 ){
                         System.out.println("found " + ind);
                         found = true;
+                        break;
                      }
                      else{
                         ind+=4;
@@ -67,9 +69,12 @@ public class Problem47{
       for(int i = 2; i< n; i++){
          if(n% i==0 && primes[i]){
             if(primes[(int)n/i]){
+               some.add(i);
                some.add((int)n/i);
+              
                
             }else{
+               some.add(i);
                some.addAll(getFactors(n/i, primes));
                
          
